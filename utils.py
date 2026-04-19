@@ -35,3 +35,5 @@ def generate_colored_scale(diff, is_valid=True):
     scale_list[center + shift] = "_" 
     
     return f"{color}[{''.join(scale_list)}]{RESET}"
+
+

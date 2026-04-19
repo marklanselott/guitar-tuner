@@ -4,8 +4,6 @@ from tuner import GuitarEngine
 import sounddevice as sd
 import sys, os
 
-load_dotenv()
-
 UP = "\033[A"    
 CLR = "\033[K"    
 
