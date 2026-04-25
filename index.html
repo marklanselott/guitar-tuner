@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - Ligthbox</title>
+
+		<link rel="stylesheet" href="./dist/reveal.css">
+		<link rel="stylesheet" href="./dist/theme/black.css" id="theme">
+
+		<style>
+			.reveal {
+				font-size: 24px;
+			}
+			.reveal figure {
+				margin: 0 0 1rem 0;
+				text-align: left;
+			}
+			.reveal figure img,
+			.reveal figure video {
+				margin: 0.25rem 0 0 0;
+			}
+			figcaption, a {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+				<section>
+					<h1>Рибіцький Марк</h1>
+					<br>
+					<h2>Гітарний тюнер</h2>
+				</section>
+
+				<section>
+					<section>
+						<h1>Чому обрав робити гітарний тюнер</h1>
+					</section>
+					
+					<section>
+						<h1>Усі варіанти які були або платні</h1>
+						<div style="display:flex; align-items:center; justify-content:center; gap:2rem; width:100%;">
+							<img height="500" src="./assets/tuner_price_sub.jpg">
+							<img height="200" src="./assets/sticker_no_money.webp">
+						</div>
+					</section>
+					<section>
+						<h1>Або в тебе постійно реклама</h1>
+						<div style="display:flex; align-items:center; justify-content:center; gap:2rem; width:100%;">
+							<img height="500" src="./assets/tuner_ads_sub.jpg">
+							<img height="200" src="./assets/sticker_angry_dis.webp">
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Опираючись на це було створено альтернативу</h1>
+					</section>
+
+					<section>
+						<h2>Гітарний тюнер з таких компонентів як:</h2>
+					</section>
+
+					<section>
+						<h2>Одноплатний комп'ютер Pandas</h2>
+                    	<img height="500" src="./assets/pandas.jpg" data-preview-image style="border-radius: 20px;">
+					</section>
+
+					<section>
+						<h2>Та OLED дисплей який мі під'єднаємо по HDMI</h2>
+                    	<img height="500" src="./assets/oled_disaply.jpg" data-preview-image style="border-radius: 20px;">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Тільки є одне АЛЕ</h2>
+					</section>
+
+					<section>
+						<h2>Є бажання зробити гарний UI </h2>
+					</section>
+
+					<section>
+						<h2>A на платі немає графічної оболочки</h2>
+					</section>
+				</section>
+
+				<section>
+					<h2>Якщо по простому на прикладі Windows 11</h2>
+				</section>
+
+				<section>
+					<h2>Шлях від системи до дисплея</h2>
+
+					<div class="r-hstack items-start">
+						<div class="r-vstack items-start">
+							<h5>Windows 11</h5>
+							<figure>
+								<figcaption>Операційна система керує ресурсами та дає команду програмам, що саме потрібно відобразити на екрані.</figcaption>
+								<img height="200" src="./assets/win11_logo.jpg" data-preview-image>
+							</figure>
+						</div>
+
+						<div style="width: 1px; height: 30vh; margin: 0 3rem;background-color: #999;"></div>
+
+						<div class="r-vstack items-start">
+							<h5>Direct X</h5>
+							<figure>
+								<figcaption>Набір інструментів (API), який перекладає графічні команди мовою, зрозумілою для відеокарти.</figcaption>
+								<img height="200" src="./assets/directx_microsoft.jpg">
+							</figure>
+						</div>
+
+						<div style="width: 1px; height: 30vh; margin: 0 3rem;background-color: #999;"></div>
+
+						<div class="r-vstack items-start">
+							<h5>Nvidia</h5>
+							<figure>
+								<figcaption>Графічний процесор та його драйвер обробляють отримані дані та формують фінальне зображення в пам'яті.</figcaption>
+								<img height="200" src="./assets/nvidia_logo.png">
+							</figure>
+						</div>
+
+						<div style="width: 1px; height: 30vh; margin: 0 3rem;background-color: #999;"></div>
+
+						<div class="r-vstack items-start">
+							<h5>Monitor</h5>
+							<figure>
+								<figcaption>Фізичний пристрій, який отримує готову картинку яку треба просто відобразити.</figcaption>
+								<img height="200" src="./assets/monitor.svg">
+							</figure>
+						</div>
+					</div>
+
+				</section>
+
+				<section>
+					<section>
+						<h1>І проблема в нас в тому що в нас цього немає</h1>
+
+						<div class="r-hstack items-start">
+							<div class="r-vstack items-start">
+								<figure>
+									<img height="200" src="./assets/not_directx_microsoft.jpg">
+								</figure>
+							</div>
+
+							<div style="width: 1px; height: 30vh; margin: 0 3rem;background-color: #999;"></div>
+
+							<div class="r-vstack items-start">
+								<figure>
+									<img height="200" src="./assets/not_nvidia_logo.png">
+								</figure>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Тому все що ми хочемо побачити на дисплеї</h2>
+						<h3>Ми маємо малювати самі, вручну</h3>
+					</section>
+
+					<section>
+						<h2>В нас є проблема в тому що коли ми на звичайному комп'ютері</h2>
+						<h3>То зображенням займається Nvidia</h3>
+						<img height="200" src="./assets/nvidia_logo.png">
+					</section>
+
+					<section>
+						<h1>А Nvidia в свою чергу кожен кадр робить з нуля і повністю</h1>
+						<img height="300" src="./assets/frames_example.png">
+					</section>
+
+					<section>
+						<h1>А звичайна платка таке робити не зможе</h1>
+						<img height="300" src="./assets/processor_logo.png">
+						<img height="300" src="./assets/sticker_angry_dis.webp">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Але є рішення і для таких не потужних пристроїв</h2>
+					</section>
+
+					<section>
+						<h2>FB0 (Frame Buffer)</h2>
+						<h3>- Це файл пристрою, який представляє графічний вивід комп'ютера (екран). Він дозволяє програмам взаємодіяти з відеокартою або дисплейним контролером напряму, записуючи дані про колір пікселів безпосередньо в пам'ять відеопам'яті.</h3>
+						<img height="300" src="./assets/sticker_botan.webp">
+					</section>
+				</section>
+
+				<section>
+					<section data-background-video="./assets/fb0_docs.mp4" data-background-video-loop data-background-video-muted>
+						<h2 style="color: black;">Якщо не перечитувати вам усю документацію та без великої кількості термінології</h2>
+						<img height="300" src="./assets/sticker_wtite_note.webp">
+					</section>
+
+					<section data-background-video="./assets/fb0_docs.mp4" data-background-video-loop data-background-video-muted>
+						<h2 style="color: black;">FB0 це ніби файлове сховище де ми можемо будувати свою картинку</h2>
+					</section>
+
+					<section data-background-video="./assets/fb0_docs.mp4" data-background-video-loop data-background-video-muted>
+						<h2 style="color: black;">Плюсом такого підходу те що нам не обов'язкого робити кожен кадр з нуля</h2>
+					</section>
+
+					<section data-background-video="./assets/fb0_docs.mp4" data-background-video-loop data-background-video-muted>
+						<h2 style="color: black;">Ми можемо додати на екран картинку і вона там залишиться пока ми не зробемо перезапис пам'яті!</h2>
+					</section>
+
+					<section data-background-video="./assets/fb0_docs.mp4" data-background-video-loop data-background-video-muted>
+						<h2 style="color: black;">А раз такі справи то це значно полегшує задачу для нашої платки!</h2>
+						<img height="300" src="./assets/sticker_nice.webp">
+					</section>
+				</section>
+
+				<section>
+					<h2>Це була найважча частина проекту</h2>
+					<table>
+						<tbody>
+							<tr>
+								<td>1. Дослідження теми</td>
+							</tr>
+							<tr>
+								<td>2. Перша робоча версія</td>
+							</tr>
+							<tr>
+								<td>3. Оптимізація</td>
+							</tr>
+						</tbody>
+					</table>
+					<img height="300" src="./assets/sticker_hard.webp">
+				</section>
+
+				<section>
+					<section>
+						<h2>Для другої частини з гітарою було легше</h2>
+					</section>
+
+					<section>
+						<h2>Просто треба брати звук та брати його частоту</h2>
+					</section>
+
+					<section>
+						<h2>А в кожної ноти своя частота</h2>
+						<h4>(Стандартний стрій на гітарі)</h4>
+						<table>
+							<thead>
+								<tr>
+									<th>Нота</th>
+									<th>Частота</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>e</td>
+									<td>330 Hz</td>
+								</tr>
+								<tr>
+									<td>B</td>
+									<td>247 Hz</td>
+								</tr>
+								<tr>
+									<td>G</td>
+									<td>196 Hz</td>
+								</tr>
+								<tr>
+									<td>D</td>
+									<td>145 Hz</td>
+								</tr>
+								<tr>
+									<td>A</td>
+									<td>110 Hz</td>
+								</tr>
+								<tr>
+									<td>E</td>
+									<td>82 Hz</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</section>
+
+				<section>
+					<h2>І в кінці я вже міг мати змогу не використовувати різні застосунки</h2>
+				</section>
+
+				<section id="fragments">
+					<p>І тепер...</p>
+					<p class="fragment">... Я маю змогу ...</p>
+					<p>
+						<span class="fragment">... не</span> 
+						<span class="fragment">використовувати</span>
+						<span class="fragment">різні застосунки</span>
+					</p>
+				</section>
+
+				<section id="fragments">
+					<p>Тепер!...</p>
+					<p class="fragment">... В мене ...</p>
+					<p>
+						<span class="fragment">... є</span> 
+						<span class="fragment">свій власний</span>
+						<span class="fragment">гітарний тюнер!</span>
+					</p>
+				</section>
+
+				<section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+					<img height="500" src="./assets/done_tuner.jpg" data-preview-image style="border-radius: 20px;">
+					<h2>Гітарний тюнер, перша релізна версія</h2>
+				</section>
+
+				<section>
+					<section>
+						<h2>Якщо комусь цікавий мій проект</h2>
+					</section>
+					
+					<section style="text-align: left;">
+						<h2>Весь вихідний код кожного компонента я завантажив на мій Git</h2>
+						<div class="r-hstack items-start justify-start">
+							<div class="r-vstack items-start">
+								<a href="https://github.com/marklanselott/guitar-tuner"><h5 style="font-size: 28px;">Git project</h5>
+									<figure>
+										<figcaption>guitar-tuner</figcaption>
+										<img height="100" src="./assets/github_logo.jpg" data-preview-image data-preview-fit="contain">
+									</figure>
+								</a>
+							</div>
+
+							<div style="width: 1px; height: 20vh; margin: 0 3rem;background-color: #222;"></div>
+
+							<div class="r-vstack items-start">
+								<a href="https://github.com/marklanselott">
+									<h5 style="font-size: 28px;">Author</h5>
+									<figure>
+										<figcaption>marklanselott</figcaption>
+										<img height="100" src="./assets/git_avatar.jpg" data-preview-image data-preview-fit="contain">
+									</figure>
+								</a>
+							</div>
+						</div>
+					</section>
+
+				</section>
+				
+
+			</div>
+		</div>
+
+		<script src="./dist/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				previewLinks: false,
+				width: 1280,
+				height: 720
+			});
+		</script>
+
+	</body>
+</html>
